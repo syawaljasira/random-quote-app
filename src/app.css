@@ -1,9 +1,9 @@
 .fades-color {
-  transition: background-color 0.6s ease-in-out;
+  transition: background-color 0.8s ease-in-out;
 }
 
 .fades-text {
-  animation: fadeIn linear 0.7s;
+  animation: fadeIn linear 1.2s;
 }
 
 @keyframes fadeIn {
@@ -13,4 +13,77 @@
   100% {
     opacity: 1;
   }
+}
+
+.btn-orange {
+  background-color: #f98404;
+  border-color: #f98404;
+}
+
+.btn-warm {
+  background-color: #7fc8a9;
+}
+
+.btn-sakura {
+  background-color: #ffbcbc;
+}
+
+.btn-sky {
+  background-color: #64c9cf;
+}
+
+.btn-earth {
+  background-color: #ffe194;
+}
+
+.btn-elegant {
+  background-color: #8ca1a5;
+}
+
+.bg-orange {
+  background-color: #f98404;
+}
+
+.bg-warm {
+  background-color: #7fc8a9;
+}
+
+.bg-sakura {
+  background-color: #ffbcbc;
+}
+
+.bg-sky {
+  background-color: #64c9cf;
+}
+
+.bg-earth {
+  background-color: #ffe194;
+}
+
+.bg-elegant {
+  background-color: #8ca1a5;
+}
+
+.text-orange {
+  color: #f98404;
+}
+
+.text-warm {
+  color: #7fc8a9;
+}
+
+.text-sakura {
+  color: #ffbcbc;
+}
+
+.text-sky {
+  color: #64c9cf;
+}
+
+.text-earth {
+  color: #ffe194;
+}
+
+.text-elegant {
+  color: #8ca1a5;
 }

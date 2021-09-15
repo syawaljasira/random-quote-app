@@ -1,19 +1,24 @@
-import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
-import $ from "jquery";
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
+import {
+  faFreeCodeCamp,
+  faLinkedinIn,
+} from '@fortawesome/free-brands-svg-icons';
 
-import "./app.css";
-import { colors, quotes } from "./quote";
+import './app.css';
+import { colors, quotes } from './quote';
 
 function App() {
-  const [quote, setQuote] = useState({ message: "Kerja, kerja, kerja", name: "Jokowi Dodo" });
-  const [color, setColor] = useState("dark");
-  const [fadeText, setFadeText] = useState("");
+  const [quote, setQuote] = useState({
+    message: 'Kerja, kerja, kerja',
+    name: 'Jokowi Dodo',
+  });
+  const [color, setColor] = useState('dark');
+  const [fadeText, setFadeText] = useState('');
 
   const handleQuote = () => {
-    let colorRandom = Math.round(Math.random() * 6);
+    let colorRandom = Math.round(Math.random() * 9);
     let quoteRandom = Math.round(Math.random() * 7);
 
     setQuote(quotes[quoteRandom]);
@@ -38,11 +43,11 @@ function App() {
       }
     }
 
-    setFadeText("fades-text");
+    setFadeText('fades-text');
 
     setTimeout(() => {
-      setFadeText("");
-    }, 500);
+      setFadeText('');
+    }, 1300);
   };
 
   return (
@@ -56,28 +61,57 @@ function App() {
                   <blockquote className="blockquote">
                     <div className="blockquote-body">
                       <h3 className={fadeText}>
-                        <FontAwesomeIcon icon={faQuoteLeft} className="me-3" />
+                        <FontAwesomeIcon
+                          icon={faQuoteLeft}
+                          fixedWidth
+                          className="me-3"
+                        />
                         {quote.message}
                       </h3>
                     </div>
                     <br />
-                    <div className="blockquote-footer text-end">{quote.name}</div>
+                    <div className={`blockquote-footer text-end ${fadeText}`}>
+                      {quote.name}
+                    </div>
                   </blockquote>
                 </div>
                 <div className="card-footer">
                   <div className="row justify-content-between ">
                     <div className="col-4 ">
-                      <button className={`btn btn-${color} me-2`}>Btn</button>
-                      <button className={`btn btn-${color}`}>Btn</button>
+                      <span className={`bg-${color} py-2 rounded me-2`}>
+                        <button className={`btn btn-${color} btn-sm`}>
+                          <FontAwesomeIcon
+                            icon={faLinkedinIn}
+                            className="fs-5"
+                          />
+                        </button>
+                      </span>
+                      <span className={`bg-${color} py-2 rounded`}>
+                        <button className={`btn btn-${color} btn-sm`}>
+                          <FontAwesomeIcon
+                            icon={faFreeCodeCamp}
+                            className="fs-5"
+                          />
+                        </button>
+                      </span>
                     </div>
                     <div className="col-3 ">
-                      <button type="button" className={`btn btn-${color} btn-sm p-2`} onClick={handleQuote}>
-                        New quote
-                      </button>
+                      <span className={`bg-${color} py-2 pb-2 rounded`}>
+                        <button
+                          type="button"
+                          className={`btn btn-${color} btn-sm`}
+                          onClick={handleQuote}
+                        >
+                          New quote
+                        </button>
+                      </span>
                     </div>
                   </div>
                 </div>
               </div>
+              <p className="text-center text-light py-3">
+                by <span className="fw-light">syawaljasira</span>
+              </p>
             </div>
           </div>
         </div>
