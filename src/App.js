@@ -9,8 +9,8 @@ function App() {
   const [fadeText, setFadeText] = useState('');
 
   const handleQuote = () => {
-    let colorRandom = Math.round(Math.random() * 9);
-    let quoteRandom = Math.round(Math.random() * 7);
+    let colorRandom = Math.round(Math.random() * (colors.length - 1));
+    let quoteRandom = Math.round(Math.random() * (quotes.length - 1));
 
     setQuote(quotes[quoteRandom]);
     if (quote === quotes[quoteRandom]) {

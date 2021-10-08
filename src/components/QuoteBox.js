@@ -25,9 +25,9 @@ export default function QuoteBox({ color, fadeText, quote, handleQuote }) {
         </blockquote>
       </div>
       <div className="card-footer">
-        <div className="row justify-content-between ">
-          <div className="col-8 ">
-            <span className={`bg-${color} py-2 rounded me-2`}>
+        <div className="row justify-content-between">
+          <div className="col-9 col-sm-12 mx-auto align-items-start d-flex flex-wrap align-items-center justify-content-center justify-content-sm-start">
+            <span className={`bg-${color} py-1 rounded me-2`}>
               <a
                 id="linkedin-quote"
                 href="https://www.linkedin.com/in/syawal-jasira-b3154a170"
@@ -39,7 +39,7 @@ export default function QuoteBox({ color, fadeText, quote, handleQuote }) {
                 </button>
               </a>
             </span>
-            <span className={`bg-${color} py-2 rounded me-2`}>
+            <span className={`bg-${color} py-1 rounded me-2`}>
               <a
                 id="tweet-quote"
                 href="https://www.twitter.com/intent/tweet"
@@ -47,11 +47,11 @@ export default function QuoteBox({ color, fadeText, quote, handleQuote }) {
                 rel="noreferrer"
               >
                 <button className={`btn btn-${color} btn-sm`}>
-                  <FontAwesomeIcon icon={faTwitter} className="fs-6" />
+                  <FontAwesomeIcon icon={faTwitter} className="fs-5" />
                 </button>
               </a>
             </span>
-            <span className={`bg-${color} py-2 rounded`}>
+            <span className={`bg-${color} py-1 rounded`}>
               <a
                 id="fcc-quote"
                 href="https://www.freecodecamp.org/syawaljasira"
@@ -63,16 +63,16 @@ export default function QuoteBox({ color, fadeText, quote, handleQuote }) {
                 </button>
               </a>
             </span>
-          </div>
-          <div className="col-4 col-md-3 ms-md-auto">
-            <span className={`bg-${color} py-2 pb-2 rounded`}>
+            <span
+              className={`bg-${color} rounded mt-4 mx-4 mx-sm-0 mt-sm-0 ms-sm-auto`}
+            >
               <button
                 id="new-quote"
                 type="button"
-                className={`btn btn-${color} btn-sm fw-light`}
+                className={`btn btn-${color} m-0 py-sm-2 px-sm-3 btn-sm fw-light`}
                 onClick={handleQuote}
               >
-                <p className="m-0">New quote</p>
+                New quote
               </button>
             </span>
           </div>
